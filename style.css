@@ -8,8 +8,18 @@ body, h1, h2, h3, p, ul {
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(135deg, #000 70%, #ff1493 100%);
+  background: url('https://img.freepik.com/premium-photo/engineer-linking-network-servers-hightech-data-center-global-connectivity-concept-server-networking-data-center-setup-global-connectivity-hightech-engineering_918839-44746.jpg') center/cover fixed no-repeat;
   color: #fff;
+  position: relative;
+}
+
+/* Overlay to blend image with gradient */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 60%, rgba(255,20,147,0.5) 100%);
+  z-index: -1;
 }
 
 /* Header */
@@ -34,7 +44,7 @@ header p {
 
 /* Navigation */
 nav {
-  background: #111;
+  background: rgba(17,17,17,0.9);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -71,6 +81,8 @@ section {
   max-width: 900px;
   margin: auto;
   animation: fadeIn 1.2s ease-in-out;
+  background: rgba(0,0,0,0.7); /* semi-transparent backdrop for readability */
+  border-radius: 10px;
 }
 
 section h2 {
@@ -84,7 +96,7 @@ section h2 {
 
 /* Projects */
 article {
-  background: rgba(17,17,17,0.9);
+  background: rgba(17,17,17,0.85);
   color: #fff;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -112,7 +124,7 @@ article h3 {
 /* Footer */
 footer {
   text-align: center;
-  background: #111;
+  background: rgba(17,17,17,0.9);
   color: #fff;
   padding: 1rem;
   margin-top: 2rem;
